@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Anchor International Logistics LLC - የመርከብ ላይ የስራ እድል</title>
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary-navy: #06152b;
+      --secondary-navy: #0d223f;
+      --accent-gold: #f59e0b;
+      --gold-hover: #d97706;
+      --gold-glow: rgba(245, 158, 11, 0.35);
+      --success-green: #10b981;
+      --danger-red: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(13, 34, 63, 0.75);
+      --border-color: rgba(245, 158, 11, 0.2);
+      --radius-lg: 16px;
+      --radius-md: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--primary-navy);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 70px; /* Space for sticky mobile bar */
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Top Emergency Deadline Bar */
+    .deadline-banner {
+      background: linear-gradient(90deg, #991b1b, #ef4444, #991b1b);
+      color: #ffffff;
+      padding: 10px 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .deadline-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    .timer-boxes {
+      display: inline-flex;
+      gap: 6px;
+    }
+    .timer-unit {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* Header */
+    header {
+      background: rgba(6, 21, 43, 0.92);
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      font-size: 2rem;
+      color: var(--accent-gold);
+    }
+    .logo-text h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+    .logo-text span {
+      font-size: 0.75rem;
+      color: var(--accent-gold);
+      display: block;
+      font-weight: 600;
+    }
+
+    /* Reusable CTA Button Styles */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #06152b;
+      font-weight: 800;
+      font-size: 1.15rem;
+      padding: 16px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 8px 24px var(--gold-glow);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      text-align: center;
+    }
+    .cta-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #000;
+    }
+    .cta-pulse {
+      animation: pulseAnimation 2s infinite;
+    }
+    @keyframes pulseAnimation {
+      0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+      70% { box-shadow: 0 0 0 16px rgba(245, 158, 11, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+    }
+    .cta-sm {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+
+    /* Hero Section & Slider */
+    .hero {
+      position: relative;
+      padding: 40px 0 60px 0;
+      background: radial-gradient(circle at 50% 20%, #102a4e 0%, var(--primary-navy) 75%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 35px;
+      align-items: center;
+    }
+    .badge-urgent {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid #ef4444;
+      color: #fca5a5;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+    .hero-title span {
+      color: var(--accent-gold);
+    }
+    .key-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 25px 0;
+    }
+    .metric-card {
+      background: rgba(13, 34, 63, 0.9);
+      border: 1px solid var(--border-color);
+      padding: 14px 10px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+    .metric-card i {
+      color: var(--accent-gold);
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+    .metric-card h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .metric-card p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Interactive Image Slider */
+    .slider-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      height: 380px;
+    }
+    .slides-container {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .slide-item {
+      width: 25%;
+      height: 100%;
+      position: relative;
+    }
+    .slide-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(6, 21, 43, 0.95));
+      padding: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .slider-nav {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .dot.active {
+      background: var(--accent-gold);
+      width: 22px;
+      border-radius: 10px;
+    }
+
+    /* Live Recent Registrations Ticker */
+    .ticker-bar {
+      background: #0a1c33;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-content {
+      display: inline-block;
+      animation: marquee 28s linear infinite;
+    }
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 6px 14px;
+      border-radius: 30px;
+      margin-right: 20px;
+      font-size: 0.85rem;
+      color: #a7f3d0;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Professional ማሳሰቢያ Section */
+    .notice-section {
+      padding: 40px 0;
+    }
+    .notice-card {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(217, 119, 6, 0.04));
+      border: 1.5px solid var(--accent-gold);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .notice-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .notice-icon-box {
+      width: 50px;
+      height: 50px;
+      background: var(--accent-gold);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .notice-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+    }
+    .notice-text {
+      font-size: 1.05rem;
+      color: #e2e8f0;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .notice-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .notice-highlight-item {
+      background: rgba(6, 21, 43, 0.6);
+      padding: 12px 15px;
+      border-radius: var(--radius-md);
+      border-left: 3px solid var(--accent-gold);
+      font-size: 0.92rem;
+    }
+
+    /* Director Section */
+    .director-section {
+      padding: 50px 0;
+      background: rgba(13, 34, 63, 0.4);
+    }
+    .director-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 35px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    }
+    .director-img-box {
+      text-align: center;
+    }
+    .director-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent-gold);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      margin-bottom: 15px;
+    }
+    .director-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .director-title {
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+    .director-quote {
+      position: relative;
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.85;
+      font-style: italic;
+    }
+    .director-quote i {
+      color: var(--accent-gold);
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* Main Registration Form Section */
+    .register-section {
+      padding: 60px 0;
+      background: radial-gradient(circle at center, #0f274a 0%, var(--primary-navy) 85%);
+      position: relative;
+    }
+    .form-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      background: rgba(13, 34, 63, 0.95);
+      border: 2px solid var(--accent-gold);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+    .form-heading {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .form-heading h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .form-heading p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+    }
+    .form-label span {
+      color: #ef4444;
+    }
+    .input-control {
+      width: 100%;
+      padding: 15px 18px;
+      background: #06152b;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      color: #fff;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .input-control:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 60px 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 25px;
+    }
+    .testi-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s;
+    }
+    .testi-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+    }
+    .testi-user {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .testi-avatar {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-gold);
+    }
+    .testi-info h4 {
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 700;
+    }
+    .testi-info span {
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+    }
+    .testi-text {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+    .stars {
+      color: var(--accent-gold);
+      margin-top: 15px;
+      font-size: 0.85rem;
+    }
+
+    /* Mid Page Banner CTA */
+    .mid-cta-banner {
+      background: linear-gradient(135deg, #102a4e, #07172e);
+      border: 2px dashed var(--accent-gold);
+      border-radius: var(--radius-lg);
+      padding: 35px 25px;
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    /* Sticky Mobile Bottom Bar */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(6, 21, 43, 0.97);
+      border-top: 1px solid var(--accent-gold);
+      padding: 10px 15px;
+      z-index: 999;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.5);
+    }
+    .mobile-sticky-cta a {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #030b17;
+      padding: 35px 0 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .director-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .director-quote {
+        text-align: left;
+      }
+      .mobile-sticky-cta {
+        display: block;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .key-metrics {
+        grid-template-columns: 1fr;
+      }
+      .slider-wrapper {
+        height: 260px;
+      }
+      .cta-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 14px 20px;
+      }
+      .form-wrapper {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Live Countdown Banner -->
+  <div class="deadline-banner">
+    <div class="container deadline-inner">
+      <div>
+        <i class="fa-solid fa-hourglass-half"></i> <strong>የምዝገባ ማብቂያ ቀን እየተቃረበ ነው!</strong> የቀረው ጊዜ:
+      </div>
+      <div class="timer-boxes" id="countdownTimer">
+        <span class="timer-unit" id="days">02 ቀን</span>
+        <span class="timer-unit" id="hours">14 ሰዓት</span>
+        <span class="timer-unit" id="minutes">45 ደቂቃ</span>
+        <span class="timer-unit" id="seconds">12 ሰከንድ</span>
+      </div>
+      <div>
+        <a href="https://addismobileapps.com/sms.html" class="cta-btn cta-sm cta-pulse" style="color: #06152b; padding: 5px 15px; font-size: 0.85rem;">
+          <i class="fa-solid fa-key"></i> የመከታተያ ቁጥር ያግኙ
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <div class="logo-box">
+        <i class="fa-solid fa-anchor logo-icon"></i>
+        <div class="logo-text">
+          <h1>ANCHOR INTERNATIONAL</h1>
+          <span>LOGISTICS LLC • GLOBAL MARITIME CAREERS</span>
+        </div>
+      </div>
+      <a href="https://addismobileapps.com/sms.html" class="cta-btn cta-sm" style="display: none; @media(min-width: 768px){display: inline-flex;}">
+        <i class="fa-solid fa-ticket"></i> የመከታተያ ቁጥር ያግኙ
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge-urgent">
+          <i class="fa-solid fa-bell"></i> በአስቸኳይ የወጣ ክፍት የስራ ማስታወቂያ
+        </div>
+        <h1 class="hero-title">
+          በአለም አቀፍ የቅንጦት የመንገደኞችና የጭነት መርከቦች ላይ <span>ቀጥታ የስራ ዕድል!</span>
+        </h1>
+        <p style="font-size: 1.05rem; color: #cbd5e1; margin-bottom: 20px;">
+          መልካም ዜና ለኢትዮጵያውያን ስራ ፈላጊዎች! <strong>Anchor International Logistics LLC</strong> በዓለም አቀፍ የመርከብ መስመሮች ላይ በተለያዩ የስራ መስኮች <strong>3,000 ክፍት ቦታዎችን</strong> አዘጋጅቶ ይጠብቆታል።
+        </p>
+
+        <!-- Key Metrics -->
+        <div class="key-metrics">
+          <div class="metric-card">
+            <i class="fa-solid fa-users"></i>
+            <h4>3,000</h4>
+            <p>የተፈቀደ ክፍት ቦታ</p>
+          </div>
+          <div class="metric-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h4>8ኛ እና ከዚያ በላይ</h4>
+            <p>የትምህርት ዝግጅት</p>
+          </div>
+          <div class="metric-card">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <h4>ከ $500 ዶላር ጀምሮ</h4>
+            <p>ወርሃዊ ደመወዝ</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 25px;">
+          <!-- CTA BUTTON SPOT 1 -->
+          <a href="https://addismobileapps.com/sms.html" class="cta-btn cta-pulse" style="width: 100%; max-width: 450px;">
+            <i class="fa-solid fa-passport"></i> አሁን ይመዝገቡና የመከታተያ ቁጥር ያግኙ
+          </a>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">
+            <i class="fa-solid fa-circle-check" style="color: var(--success-green);"></i> ከስራው በፊት ሙሉ ነጻ ስልጠና እና ኦረንቴሽን ይሰጣል።
+          </p>
+        </div>
+      </div>
+
+      <!-- Sliding Images -->
+      <div class="slider-wrapper">
+        <div class="slides-container" id="sliderContainer">
+          <div class="slide-item">
+            <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800&q=80" alt="Luxury Cruise Ship">
+            <div class="slide-caption">🚢 ዘመናዊ የመንገደኞችና የጭነት መርከቦች</div>
+          </div>
+          <div class="slide-item">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Cruise Hospitality Attendant">
+            <div class="slide-caption">🍽️ የመርከብ አቴንዳንት (አስተናጋጅነት) የስራ ዘርፍ</div>
+          </div>
+          <div class="slide-item">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Ship Engine Room">
+            <div class="slide-caption">⚙️ Engine Utility Man እና ቴክኒካል ዘርፎች</div>
+          </div>
+          <div class="slide-item">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Professional Crew Training">
+            <div class="slide-caption">🎓 አለም አቀፍ የሙያ ስልጠና እና ዝግጅት</div>
+          </div>
+        </div>
+        <div class="slider-nav" id="sliderNav">
+          <span class="dot active" onclick="setSlide(0)"></span>
+          <span class="dot" onclick="setSlide(1)"></span>
+          <span class="dot" onclick="setSlide(2)"></span>
+          <span class="dot" onclick="setSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Registered Users Marquee / Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-content" id="liveTicker">
+      <span class="ticker-item"><i class="fa-solid fa-check-circle"></i> ሰለሞን ተሾመ (አዲስ አበባ) - የመከታተያ ቁጥር #AK-9821 አግኝቷል</span>
+      <span class="ticker-item"><i class="fa-solid fa-check-circle"></i> ቤተልሔም ግርማ (ባህር ዳር) - የመከታተያ ቁጥር #AK-9822 አግኝታለች</span>
+      <span class="ticker-item"><i class="fa-solid fa-check-circle"></i> ሙሀመድ ኑር (ሀዋሳ) - የመከታተያ ቁጥር #AK-9823 አግኝቷል</span>
+      <span class="ticker-item"><i class="fa-solid fa-check-circle"></i> ሄለን ዳዊት (ድሬዳዋ) - የመከታተያ ቁጥር #AK-9824 አግኝታለች</span>
+      <span class="ticker-item"><i class="fa-solid fa-check-circle"></i> ዮናስ አበበ (ናዝሬት/አዳማ) - የመከታተያ ቁጥር #AK-9825 አግኝቷል</span>
+      <span class="ticker-item"><i class="fa-solid fa-check-circle"></i> ትእግስት ካሳ (ጎንደር) - የመከታተያ ቁጥር #AK-9826 አግኝታለች</span>
+    </div>
+  </div>
+
+  <!-- 2. ማሳሰቢያ Section (Professional Notice) -->
+  <section class="notice-section">
+    <div class="container">
+      <div class="notice-card">
+        <div class="notice-header">
+          <div class="notice-icon-box">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h2 class="notice-title">ክቡራትና ክቡራን አመልካቾች - ህጋዊ ማሳሰቢያ</h2>
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Anchor International Logistics LLC የተሟላ የቅጥር መመሪያ</p>
+          </div>
+        </div>
+
+        <div class="notice-text">
+          በድርጅታችን የተከፈተውን <strong>3,000 አለም አቀፍ የመርከብ ላይ የስራ እድል</strong> በትክክለኛ ስርዓት ለማስተናገድና የቅጥር ሂደቱን ፍትሃዊ ለማድረግ ሁሉም ተመዝጋቢዎች ህጋዊ <strong>የመከታተያ ቁጥር (Tracking Code)</strong> መያዝ ግዴታቸው ነው። 
+          ያለዚህ ዲጂታል ቁጥር ምንም አይነት ቃለ-መጠይቅም ሆነ የስራ ስልጠና ማግኘት አይቻልም።
+        </div>
+
+        <div class="notice-highlights">
+          <div class="notice-highlight-item">
+            <i class="fa-solid fa-user-check" style="color: var(--accent-gold);"></i> <strong>ስም:</strong> ሙሉ ስም ከመታወቂያ ጋር የሚመሳሰል
+          </div>
+          <div class="notice-highlight-item">
+            <i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> <strong>እድሜ:</strong> 18 አመትና ከዚያ በላይ
+          </div>
+          <div class="notice-highlight-item">
+            <i class="fa-solid fa-phone-volume" style="color: var(--accent-gold);"></i> <strong>ስልክ ቁጥር:</strong> የሚሰራ ንቁ የሞባይል ቁጥር
+          </div>
+          <div class="notice-highlight-item">
+            <i class="fa-solid fa-file-shield" style="color: var(--accent-gold);"></i> <strong>የትምህርት ደረጃ:</strong> 8ኛ ክፍል እና ከዚያ በላይ
+          </div>
+        </div>
+
+        <p style="font-weight: 700; color: #fff; margin-bottom: 20px;">
+          ⚠️ <strong>ማጠቃለያ:</strong> እባክዎ ከዚህ በታች ያለውን ቅጽ በትክክል በመሙላት <strong>የመከታተያ ቁጥርዎን</strong> ወዲያውኑ ይቀበሉ።
+        </p>
+
+        <!-- CTA BUTTON SPOT 2 -->
+        <a href="https://addismobileapps.com/sms.html" class="cta-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> የመከታተያ ቁጥር ያግኙ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Message From The Director Section -->
+  <section class="director-section">
+    <div class="container">
+      <div class="director-card">
+        <div class="director-img-box">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Director of Anchor Logistics" class="director-img">
+          <h3 class="director-name">ካፕቴን ሄኖክ ታደሰ</h3>
+          <p class="director-title">የሰው ኃይል እና ስምሪት ዋና ዳይሬክተር</p>
+          <span style="font-size: 0.78rem; color: #94a3b8;">Anchor International Logistics LLC</span>
+        </div>
+        <div>
+          <div class="director-quote">
+            <i class="fa-solid fa-quote-left"></i>
+            "ድርጅታችን አንከር ኢንተርናሽናል ሎጅስቲክስ (Anchor International Logistics LLC) ለኢትዮጵያውያን ወጣቶች አለም አቀፍ የባህር ላይ የስራ እድልን በከፍተኛ ሃላፊነትና ተዓማኒነት ይዞ ቀርቧል። መርከብ ላይ መስራት ከፍተኛ የውጭ ምንዛሬ ገቢ የሚያስገኝ ብቻ ሳይሆን አለምን የመጎብኘትና እራስን በሙያ የማሳደግ ትልቅ በር ነው። 
+            <br><br>
+            የትምህርት ደረጃችሁ ከ 8ኛ ክፍል በላይ የሆነ ማንኛውም ዜጋ በሙያው አሰልጥነን ወደ ስራ እናሰማራለን። ሁሉንም ተመዝጋቢዎች የምንመክረው የተሰጠውን ፈጣን የጊዜ ገደብ በመጠቀም ቅጹን ሞልታችሁ ህጋዊ የመከታተያ ቁጥራችሁን እንድትይዙ ነው። በመርከቦቻችን ላይ አብረን እንድንሰራ በደስታ እጋብዛችኋለሁ!"
+          </div>
+
+          <div style="margin-top: 25px;">
+            <!-- CTA BUTTON SPOT 3 -->
+            <a href="https://addismobileapps.com/sms.html" class="cta-btn cta-sm">
+              <i class="fa-solid fa-id-card"></i> የመከታተያ ቁጥር ያግኙ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mid Banner Call-to-Action -->
+  <div class="container">
+    <div class="mid-cta-banner">
+      <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; color: #fff;">
+        የተመደበው የ 3,000 ሰው ኮታ በፍጥነት እየተሞላ ነው!
+      </h2>
+      <p style="color: #cbd5e1; max-width: 650px; margin: 0 auto 25px auto;">
+        ምዝገባዎ የተረጋገጠ እንዲሆንና የቃለ መጠይቅ ቀጠሮ እንዲደርስዎ አሁኑኑ ይመዝገቡ።
+      </p>
+      <!-- CTA BUTTON SPOT 4 -->
+      <a href="https://addismobileapps.com/sms.html" class="cta-btn cta-pulse" style="font-size: 1.25rem;">
+        <i class="fa-solid fa-certificate"></i> የመከታተያ ቁጥር ያግኙ
+      </a>
+    </div>
+  </div>
+
+  <!-- 4. Registration Section with Form -->
+  <section class="register-section" id="register">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-heading">
+          <span style="color: var(--accent-gold); font-weight: 800; font-size: 0.9rem; text-transform: uppercase;">ቀጥታ የመመዝገቢያ ቅጽ</span>
+          <h3>የግል መረጃዎን በትክክል ያስገቡ</h3>
+          <p>ስም፣ እድሜ፣ ስልክና የትምህርት ደረጃ ሞልተው 'የመከታተያ ቁጥር ያግኙ' የሚለውን ይጫኑ</p>
+        </div>
+
+        <form id="recruitmentForm" onsubmit="handleRegistration(event)">
+          <!-- ስም -->
+          <div class="form-group">
+            <label class="form-label" for="fullName">ሙሉ ስም (ከነ አያት) <span>*</span></label>
+            <input type="text" id="fullName" class="input-control" placeholder="ምሳሌ: አበበ ከበደ ታሪኩ" required>
+          </div>
+
+          <!-- እድሜ -->
+          <div class="form-group">
+            <label class="form-label" for="userAge">እድሜ <span>*</span></label>
+            <input type="number" id="userAge" class="input-control" placeholder="ምሳሌ: 24" min="18" max="48" required>
+          </div>
+
+          <!-- ስልክ -->
+          <div class="form-group">
+            <label class="form-label" for="userPhone">ስልክ ቁጥር <span>*</span></label>
+            <input type="tel" id="userPhone" class="input-control" placeholder="ምሳሌ: 0911223344" required>
+          </div>
+
+          <!-- የትምህርት ደረጃ -->
+          <div class="form-group">
+            <label class="form-label" for="educationLevel">የትምህርት ደረጃ <span>*</span></label>
+            <select id="educationLevel" class="input-control" required>
+              <option value="" disabled selected>የትምህርት ደረጃ ይምረጡ</option>
+              <option value="8th">8ኛ ክፍል ያጠናቀቀ</option>
+              <option value="10th">10ኛ ክፍል ያጠናቀቀ</option>
+              <option value="12th">12ኛ ክፍል ያጠናቀቀ</option>
+              <option value="diploma">ዲፕሎማ / TVET ደረጃ</option>
+              <option value="degree">የመጀመሪያ ዲግሪ እና ከዚያ በላይ</option>
+            </select>
+          </div>
+
+          <!-- የስራ መስክ ምርጫ -->
+          <div class="form-group">
+            <label class="form-label" for="jobField">የሚፈልጉት የስራ ዘርፍ <span>*</span></label>
+            <select id="jobField" class="input-control" required>
+              <option value="attendant">የመርከብ አቴንዳንት (አስተናጋጅ / Hospitality)</option>
+              <option value="deck">Deck Utility (የመርከብ ፅዳት እና ቁጥጥር)</option>
+              <option value="engine">Engine Utility Man (ቴክኒክ እና ረዳት)</option>
+              <option value="other">ሌሎች አጠቃላይ ክፍት የስራ መስኮች</option>
+            </select>
+          </div>
+
+          <!-- CTA BUTTON SPOT 5 (Form Submit) -->
+          <button type="submit" class="cta-btn cta-pulse" style="width: 100%; border: none; margin-top: 10px;">
+            <i class="fa-solid fa-paper-plane"></i> የመከታተያ ቁጥር ያግኙ
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Testimonials From Recruits -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>በስራው ላይ የተሰማሩ ተመራቂዎች ምስክርነት</h2>
+        <p>በ Anchor International Logistics LLC በኩል ቀደም ብለው ወደ መርከብ የስራ እድል የገቡ ዜጎች ምን ይላሉ?</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testi-card">
+          <div>
+            <div class="testi-user">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sara M." class="testi-avatar">
+              <div class="testi-info">
+                <h4>ሳራ መኮንን</h4>
+                <span>መርከብ አቴንዳንት • ሜዲትራኒያን መስመር</span>
+              </div>
+            </div>
+            <p class="testi-text">
+              "በ 10ኛ ክፍል ውጤቴ ምክንያት ተስፋ ቆርጬ ነበር። በ Anchor በኩል ተመዝግቤ ሙሉ ስልጠና ወስጄ አሁን በዓለም አቀፍ የቱሪስት መርከብ ላይ በአስተናጋጅነት እየሰራሁ ነው። በወር ከ 650 ዶላር በላይ አገኛለሁ፤ ቤተሰቦቼንም እየደገፍኩ ነው።"
+            </p>
+          </div>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0 Rating
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testi-card">
+          <div>
+            <div class="testi-user">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Yared B." class="testi-avatar">
+              <div class="testi-info">
+                <h4>ያሬድ በቀለ</h4>
+                <span>Deck Utility • ቀይ ባህርና የባህረ ሰላጤው መስመር</span>
+              </div>
+            </div>
+            <p class="testi-text">
+              "ምዝገባው በጣም ግልጽና ቀጥተኛ ነበር። ስሜንና ስልኬን ሞልቼ የመከታተያ ቁጥር ካገኘሁ በኋላ በአጭር ጊዜ ውስጥ ተጠርቼ ስልጠና ገባሁ። ምግብና መኖሪያ በመርከቡ ሙሉ በሙሉ ስለሚሸፈን ደመወዜን ሙሉ በሙሉ መቆጠብ ችያለሁ።"
+            </p>
+          </div>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0 Rating
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testi-card">
+          <div>
+            <div class="testi-user">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Kidus A." class="testi-avatar">
+              <div class="testi-info">
+                <h4>ኪዳነ አለማየሁ</h4>
+                <span>Engine Utility Man • ካሪቢያን መስመር</span>
+              </div>
+            </div>
+            <p class="testi-text">
+              "የ 8ኛ ክፍል ሰርተፊኬት ይዤ ነበር ያመለከትኩት። የተሰጠን የሞተርና የቴክኒክ ኦረንቴሽን ብቁ እንድሆን አድርጎኛል። አሁን ከ $800 ዶላር በላይ በወር አገኛለሁ። እድሉን እንዳያመልጣችሁ ሁላችሁም አሁኑኑ ተመዝገቡ።"
+            </p>
+          </div>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0 Rating
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <!-- CTA BUTTON SPOT 6 -->
+        <a href="https://addismobileapps.com/sms.html" class="cta-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> የመከታተያ ቁጥር ያግኙ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 15px;">
+        <i class="fa-solid fa-anchor" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+        <h4 style="color: #fff; margin-top: 5px;">Anchor International Logistics LLC</h4>
+      </div>
+      <p style="margin-bottom: 15px;">አዲስ አበባ ፣ ኢትዮጵያ | ዓለም አቀፍ የባህር ላይ የስራ ስምሪት አገልግሎት</p>
+      <div style="margin-bottom: 20px;">
+        <a href="https://addismobileapps.com/sms.html" style="color: var(--accent-gold); text-decoration: none; font-weight: 700; margin: 0 10px;">የመከታተያ ቁጥር ማረጋገጫ</a> •
+        <a href="#register" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">የምዝገባ ቅጽ</a>
+      </div>
+      <p style="font-size: 0.78rem;">© 2026 Anchor International Logistics LLC. መብቱ በህግ የተጠበቀ ነው።</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom CTA for Mobile Conversion -->
+  <div class="mobile-sticky-cta">
+    <a href="https://addismobileapps.com/sms.html" class="cta-btn cta-pulse">
+      <i class="fa-solid fa-key"></i> የመከታተያ ቁጥር ያግኙ
+    </a>
+  </div>
+
+  <!-- JavaScript for Countdown, Image Slider & Redirection -->
+  <script>
+    // 1. Sliding Images Logic
+    let currentSlide = 0;
+    const slidesContainer = document.getElementById('sliderContainer');
+    const dots = document.querySelectorAll('.slider-nav .dot');
+    const totalSlides = 4;
+
+    function setSlide(index) {
+      currentSlide = index;
+      slidesContainer.style.transform = `translateX(-${currentSlide * 25}%)`;
+      dots.forEach((dot, idx) => {
+        if(idx === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Auto-advance slides every 3.8 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      setSlide(currentSlide);
+    }, 3800);
+
+    // 2. Countdown Timer Logic (Dynamic 2-day deadline from now)
+    const targetDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000);
+    
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById('countdownTimer').innerHTML = "ምዝገባው ተጠናቋል!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = (days < 10 ? '0' : '') + days + ' ቀን';
+      document.getElementById('hours').innerText = (hours < 10 ? '0' : '') + hours + ' ሰዓት';
+      document.getElementById('minutes').innerText = (minutes < 10 ? '0' : '') + minutes + ' ደቂቃ';
+      document.getElementById('seconds').innerText = (seconds < 10 ? '0' : '') + seconds + ' ሰከንድ';
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 3. Form Submission -> Redirect to addismobileapps.com/sms.html
+    function handleRegistration(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('fullName').value.trim();
+      const age = document.getElementById('userAge').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      const edu = document.getElementById('educationLevel').value;
+
+      if(!name || !age || !phone || !edu) {
+        alert('እባክዎ ሁሉንም መስኮች በትክክል ይሙሉ!');
+        return;
+      }
+
+      // Automatically redirect to the target URL
+      window.location.href = "https://addismobileapps.com/sms.html";
+    }
+  </script>
+</body>
+</html>
